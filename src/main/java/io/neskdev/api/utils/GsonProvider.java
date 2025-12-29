@@ -1,4 +1,4 @@
-package io.neskdev.api.gson;
+package io.neskdev.api.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

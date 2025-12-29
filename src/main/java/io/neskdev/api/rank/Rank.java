@@ -1,8 +1,8 @@
 package io.neskdev.api.rank;
 
 
+import io.neskdev.api.utils.GsonProvider;
 import org.bson.Document;
-import io.neskdev.api.gson.GsonProvider;
 
 import java.util.Set;
 import java.util.function.Predicate;
