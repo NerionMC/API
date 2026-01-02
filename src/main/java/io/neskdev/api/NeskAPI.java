@@ -1,5 +1,6 @@
 package io.neskdev.api;
 
+import io.neskdev.api.lobby.Lobby;
 import io.neskdev.api.lobby.LobbyManager;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +14,7 @@ public interface NeskAPI {
     DatabaseManager getDatabaseManager();
 
     LobbyManager getLobbyManager();
+    Lobby getLobby();
 
     static NeskAPI getProvider() {
         return Provider.getProvider();
