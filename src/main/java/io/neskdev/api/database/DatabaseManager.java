@@ -6,4 +6,5 @@ import redis.clients.jedis.Jedis;
 public interface DatabaseManager {
     Jedis getJedis();
     MongoClient getMongoClient();
+    MaintenanceSystem getMaintenanceSystem();
 }
