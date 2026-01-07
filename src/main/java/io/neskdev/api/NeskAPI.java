@@ -2,30 +2,26 @@ package io.neskdev.api;
 
 import io.neskdev.api.lobby.Lobby;
 import io.neskdev.api.lobby.LobbyManager;
-import lombok.Getter;
-import lombok.Setter;
 import io.neskdev.api.database.DatabaseManager;
 import io.neskdev.api.rank.RankRepository;
 
-public interface NeskAPI {
+public abstract class NeskAPI {
 
-    RankRepository getRankRepository();
+    private static NeskAPI instance;
 
-    DatabaseManager getDatabaseManager();
-
-    LobbyManager getLobbyManager();
-    Lobby getLobby();
-
-    static NeskAPI getProvider() {
-        return Provider.getProvider();
+    public static NeskAPI get() {
+        return instance;
     }
 
-    static void setProvider(NeskAPI api) {
-        Provider.setProvider(api);
+    public static void set(NeskAPI instance) {
+        NeskAPI.instance = instance;
     }
 
-    class Provider {
-        @Getter @Setter
-        private static NeskAPI provider;
-    }
+    public abstract RankRepository getRankRepository();
+
+    public abstract DatabaseManager getDatabaseManager();
+
+    public abstract LobbyManager getLobbyManager();
+
+    public abstract Lobby getLobby();
 }
