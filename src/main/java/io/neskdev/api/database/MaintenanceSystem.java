@@ -6,6 +6,6 @@ public interface MaintenanceSystem {
     void setMaintenance();
     void addAllowedPlayer();
     void removeAllowedPlayer();
-    void isAllowed();
+    boolean isAllowed();
 
 }
