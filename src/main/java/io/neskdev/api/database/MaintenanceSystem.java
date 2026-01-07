@@ -9,5 +9,6 @@ public interface MaintenanceSystem {
     void addAllowedPlayer(UUID uuid);
     void removeAllowedPlayer(UUID uuid);
     boolean isAllowed(UUID uuid);
+    boolean hasPermission(UUID uuid);
 
 }
